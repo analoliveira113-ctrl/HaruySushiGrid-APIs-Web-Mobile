@@ -1157,6 +1157,10 @@
                 modalDetalhes.classList.add('opacity-0', 'pointer-events-none');
             }, 300);
         }
+        //Fechar modal na area escura fora do conteudo
+        modalDetalhes.addEventListener('click', function (e) {
+            if (e.target === modalDetalhes) fecharModalCarrinho();
+        });
 
         //carrinho
         //array para armazenar itens do carrinho
